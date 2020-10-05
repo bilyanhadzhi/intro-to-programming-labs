@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+notes_*.txt
+plan.txt
+sources/

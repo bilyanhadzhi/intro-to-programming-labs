@@ -1,0 +1,113 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[bulgarian]{babel}
+\usepackage{inconsolata}
+\usepackage{hyperref}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=blue
+}
+
+\newcommand{\example}[2] {
+
+    \underline{Пример}:
+
+    Вход:\hphantom{д} \code{#1}
+
+    Изход: \code{#2}
+}
+
+\newcommand{\explanation}[1] {
+
+    \underline{Пояснение}: #1
+}
+
+\newcommand{\exercise}[2] {
+    \textbf{Зад. #1.} #2
+}
+
+\newcommand{\latinttfamily}{\fontencoding{OT1}\ttfamily}
+\DeclareTextFontCommand{\ltexttt}{\latinttfamily}
+\newcommand{\code}[1]{\ltexttt{#1}}
+
+
+\title{Увод в програмирането 2020/2021\\ Група 8, практикум №1}
+\date{}
+
+\begin{document}
+\maketitle
+
+\exercise{1}{Да се напише програма, която извежда \code{Hello, FMI!}\\ на стандартния изход.
+}
+
+\bigskip
+
+
+\exercise{2}{При вход число от тип \code{double}, да се изведе
+    цялата му част.
+}
+
+\bigskip
+
+\exercise{3}{Да се напише програма, която извежда големината на променлива от всеки от следните
+    типове:
+
+    \code{char}, \code{short}, \code{int}, \code{long}, \code{float}, \code{double}.
+}
+
+\bigskip
+
+\exercise{4}{При въведени цели числа \code{x} и \code{y}, да се изведе сбора им по следния начин:
+}
+\example{6 4}{6 + 4 = 10}
+
+\bigskip
+
+\exercise{5}{При вход положително цяло число \code{n}, да се изведе в конзолата
+    колко секунди има в \code{n} дни.
+}
+\example{1}{86400}
+\example{7}{604800}
+
+\newpage
+\exercise{6}{Напишете програма, която приема две цели числа и извежда в конзолата
+    тяхното средно аритметично.
+}
+\example{8 59}{33.5}
+
+\bigskip
+
+\exercise{7}{При прочетени от стандартния вход три цели числа \code{a}, \code{b} и \code{c},
+    да се изпише в конзолата дали за тях са изпълнени следните булеви условия:
+    \begin{itemize}
+        \item ${a^2 + b^2 = c^2}$;
+        \item {
+            дали сумата от последните цифри на числата \code{a} и \code{b}
+            е равна на \code{c}.
+        }
+    \end{itemize}
+}
+
+\bigskip
+
+\exercise{8}{Да се въведе символ в стандартния вход и да се изведе числената му стойност.
+}
+\bigskip
+
+\exercise{9}{По вход малка латинска буква да се изведе главната латиснка буква,
+    която ѝ съответства. Може да използвате
+    \href{https://www.cs.cmu.edu/~pattis/15-1XX/common/handouts/ascii.html}{ASCII таблицата} за помощ.
+}
+\bigskip
+
+\exercise{10}{Да се въведат две цели числа като променливи и да се разменият
+техните стойности по два начина. (без да се използва \code{swap()})
+}
+
+\bigskip
+
+
+\end{document}

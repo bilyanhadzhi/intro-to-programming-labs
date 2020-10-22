@@ -1,0 +1,152 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[bulgarian]{babel}
+\usepackage{inconsolata}
+\usepackage{hyperref}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=blue
+}
+
+\newcommand{\example}[2] {
+
+    \smallskip
+    \underline{Пример}:
+
+    Вход:\hphantom{д} \code{#1}
+
+    Изход: \code{#2}
+}
+
+\newcommand{\explanation}[1] {
+
+    \underline{Пояснение}: #1
+}
+
+\newcommand{\exercise}[2] {
+    \textbf{Зад. #1.} #2
+}
+
+\newcommand{\latinttfamily}{\fontencoding{OT1}\ttfamily}
+\DeclareTextFontCommand{\ltexttt}{\latinttfamily}
+\newcommand{\code}[1]{\ltexttt{#1}}
+
+
+\title{Увод в програмирането 2020/2021\\ Група 8, практикум №2}
+\date{}
+
+\begin{document}
+\maketitle
+
+\exercise{1}{
+    Да се напише програма, която приема две цели числа \code{x} и \code{y} и извежда
+    на конзолата стойността на |\code{x} - \code{y}|.
+}
+
+\bigskip
+\exercise{2}{
+    При вход три цели числа от конзолата, да се изведе най-голямото от тях.
+}
+
+\bigskip
+\exercise{3}{
+    При вход две числа от тип \code{double}, които ще считаме за координати на точка в равнината,
+    да се изведе в кой квадрант се намира точката.
+}
+
+\example{1 -4}{IV}
+
+\bigskip
+\exercise{4}{
+    При вход цяло положително число, което ще приемем за година, да се изпише
+    на екрана дали съответната година е високосна.
+}
+\explanation{
+    Една година е високосна, ако е вярно някое от следните:
+    \begin{itemize}
+        \item дели се на 4, но не се дели на 100;
+        \item дели се на 400.
+    \end{itemize}
+
+}
+
+\bigskip
+\exercise{5}{
+    При вход - цяло число в интервала [1, 7], да се изведе на кой ден от седмицата съответства то.
+}
+\example{5}{Friday}
+\example{9}{Noday}
+
+\newpage
+\exercise{6}{
+    Да се напише програма, която приема 4 цели числа, считайки първите две за ден и месец на дата,
+    а последните две - ден и месец на друга дата. Да се изведе на стандартния изход дали първата
+    дата е преди втората.
+}
+
+\example{15 9 25 12}{1}
+\explanation{В случая първата дата е 15.09, а втората – 25.12.}
+\example{1 3 10 2}{0}
+
+\bigskip
+\exercise{7}{
+    Да се напише програма, която при вход цяло число в интервала [0, 100], изписва
+    на каква оценка съответства конкретният брой точки.
+
+    Ръководете се от следната таблица:
+
+    \begin{tabular}{ |c|c|c| }
+        \hline
+        Точки & Оценка \\
+        \hline
+        < 0 & \code{Impossible!} \\
+        \hline
+        [0, 59] & \code{2} \\
+        \hline
+        [60, 69] & \code{3} \\
+        \hline
+        [70, 79] & \code{4} \\
+        \hline
+        [80, 89] & \code{5} \\
+        \hline
+        [90, 100] & \code{6} \\
+        \hline
+        > 100 & \code{Incredible!} \\
+        \hline
+    \end{tabular}
+}
+\example{75}{4}
+
+\bigskip
+\exercise{8}{
+    Да се напише програма, която приема три цели страни на триъгиълник.
+    \begin{itemize}
+        \item Ако страните не образуват триъгълник, да се изпише \code{Invalid sides};
+        \item В противен случай, да се изпише:
+        \begin{itemize}
+            \item \code{equilateral}, ако триъгълникът е равностранен;
+            \item \code{isosceles}, ако е равнобедрен;
+            \item \code{scalene}, ако е разностранен.
+        \end{itemize}
+    \end{itemize}
+}
+
+\newpage
+\exercise{9}{
+    По дадено цяло трицифрено число \code{n}, да се изпише дали е вярно, че \code{n} се дели на всичките си цифри.
+
+    *Предполагаме, че \code{n} не съдържа 0 като цифра.
+}
+\example{128}{1}
+\explanation{\code{128 \% 1 == 0}, \code{128 \% 2 == 0}, \code{128 \% 8 == 0}}
+
+\bigskip
+\exercise{10}{
+    Да се напише програма, която приема 6 цели числа, съответстващи на координатите на три точки.
+    Да се изпише на конзолата дали тези три точки лежат на една права.
+}
+
+\end{document}

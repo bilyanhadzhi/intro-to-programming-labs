@@ -1,0 +1,154 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[bulgarian]{babel}
+\usepackage{inconsolata}
+\usepackage{hyperref}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=blue
+}
+
+\newcommand{\example}[2] {
+
+    \smallskip
+    \underline{Пример}:
+
+    Вход:\hphantom{д} \code{#1}
+
+    Изход: \code{#2}
+}
+
+\newcommand{\explanation}[1] {
+
+    \underline{Пояснение}: #1
+}
+
+\newcommand{\outputline}[1] {\\\indent \indent #1}
+
+\newcommand{\exercise}[2] {
+    \textbf{Зад. #1.} #2
+}
+
+\newcommand{\latinttfamily}{\fontencoding{OT1}\ttfamily}
+\DeclareTextFontCommand{\ltexttt}{\latinttfamily}
+\newcommand{\code}[1]{\ltexttt{#1}}
+
+
+\title{Увод в програмирането 2020/2021\\ Група 8, практикум №3}
+\date{}
+
+% if, switch, while, do while, bitwise, for
+
+\begin{document}
+\maketitle
+
+\exercise{1}{
+    Да се напише програма, която приема цяло число и извежда цифрите му наобратно.
+}
+\bigskip
+
+\exercise{2}{
+    Да се напише програма, която чете цели положителни числа от конзолата докато не се въведе \code{0}.
+    Тогава от въведените числа да се изведат следните:
+    \begin{itemize}
+        \item най-голямото четно число;
+        \item най-голямото нечетно число;
+        \item сборът на всички числа;
+        \item средноаритметичното на всички числа.
+    \end{itemize}
+}
+\bigskip
+
+\exercise{3}{
+    Да се напише програма, която приема две цели числа и извежда
+    като редица всички цели числа между тях, разделени със запетаи.
+
+    Ако първото число е по-голямо, да се изведе намаляваща редица.
+    Ако двете числа съвпадат, да се изведе само съвпадащата им стойност.
+
+    За да е подредено, извеждайте не повече 10 числа на ред.
+}
+\example{25 25}{\outputline{25}}
+\example{39 54}{
+    \outputline{39, 40, 41, 42, 43, 44, 45, 46, 47, 48,}
+    \outputline{49, 50, 51, 52, 53, 54}
+}
+\newpage
+
+\exercise{4}{
+    Да се напише програма, която приема цяло число \code{n} и след това \code{n} на брой цели числа.
+    Да се изпише \code{yes}, ако съществуват две равни последователно въведени числа
+    и \code{no} в противен случай.
+}
+\example{6 \outputline{1 7 4 4 3 15}}{
+    yes
+}
+\bigskip
+
+\exercise{5}{
+    Да се напише програма, която приема цяло число \code{n} и
+    извежда $n$-тото число на Фибоначи.
+
+    Числата на Фибоначи са:
+    \begin{itemize}
+        \item fib(0) = 0
+        \item fib(1) = 1
+        \item fib($n$) = fib($n - 1$) + fib($n - 2$), $n > 1$
+    \end{itemize}
+}
+\bigskip
+
+\exercise{6}{
+    Дадено е шестцифрено число, съставено само от цифрите 5 и 7.
+    Разрешено ни е да променим само една негова цифра от 5 на 7 или обратно.
+    Да се изведе най-голямото число, което можем да направим чрез това правило.
+}
+\example{55775}{75775}
+\bigskip
+
+\exercise{7}{
+    Да се приеме цяло число \code{k} и да се изведе триъгълник от \code{k} реда в следния вид: (\textit{Floyd's triangle})
+}
+\example{4}{
+    \outputline{1}
+    \outputline{2 3}
+    \outputline{4 5 6}
+    \outputline{7 8 9 10}
+}
+\bigskip
+
+\exercise{8}{
+    Да се напише програма, която проверява дали едно число е просто.
+}
+\bigskip
+
+\exercise{9}{
+    Дадено ви е положително цяло число \code{n}.
+    Разглеждайки числото в двоична бройна система, изведете:
+    \begin{itemize}
+        \item Броят битове със стойност 1 в числото
+        \item Броят битове със стойност 0 в числото
+        \item Дали числото е точна степен на двойката
+        \item Дали числото е съставено от алтерниращи битове (т.е. всеки два съседни бита имат различни стойности)
+    \end{itemize}
+}
+\example{4}{
+    \outputline{Number of ones: 1}
+    \outputline{Number of zeros: 2}
+    \outputline{Is a power of 2: yes}
+    \outputline{Has alternating bits: no}
+}
+\explanation{4 $\equiv$ $100_2$. 4 е степен на двойката и има две поредни нули.}
+
+\example{10}{
+    \outputline{Number of ones: 2}
+    \outputline{Number of zeros: 2}
+    \outputline{Is a power of 2: no}
+    \outputline{Has alternating bits: yes}
+}
+\explanation{10 $\equiv 1010_2$, имаме алтерниращи битове.}
+
+\end{document}

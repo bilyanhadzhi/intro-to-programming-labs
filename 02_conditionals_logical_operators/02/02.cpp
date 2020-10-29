@@ -9,7 +9,7 @@ int main(void)
 		if (num1 > num3) {
 			std::cout << num1 << std::endl;
 		}
-		else { 
+		else {
 			std::cout << num3 << std::endl;
 		}
 	}

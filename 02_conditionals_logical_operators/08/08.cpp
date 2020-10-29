@@ -5,7 +5,7 @@ int main(void)
 	int a, b, c;
 	std::cin >> a >> b >> c;
 
-	
+
 	if (a + b <= c || a + c <= b || b + c <= a) {
 		std::cout << "Invalid sides" << std::endl;
 		return 1;

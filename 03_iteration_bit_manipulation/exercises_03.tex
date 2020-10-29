@@ -133,6 +133,7 @@
         \item Броят битове със стойност 0 в числото
         \item Дали числото е точна степен на двойката
         \item Дали числото е съставено от алтерниращи битове (т.е. всеки два съседни бита имат различни стойности)
+        \item Числото, получено от обръщането на всички нули в единици и обратно
     \end{itemize}
 }
 \example{4}{
@@ -140,15 +141,25 @@
     \outputline{Number of zeros: 2}
     \outputline{Is a power of 2: yes}
     \outputline{Has alternating bits: no}
+    \outputline{Complement: 3}
 }
-\explanation{4 $\equiv$ $100_2$. 4 е степен на двойката и има две поредни нули.}
+\explanation{4 $\equiv$ $100_2$. 4 е степен на двойката и има две поредни нули.
+При обръщане на битовете получаваме $011_2 \equiv 3$.}
 
 \example{10}{
     \outputline{Number of ones: 2}
     \outputline{Number of zeros: 2}
     \outputline{Is a power of 2: no}
     \outputline{Has alternating bits: yes}
+    \outputline{Complement: }
 }
-\explanation{10 $\equiv 1010_2$, имаме алтерниращи битове.}
+\explanation{10 $\equiv 1010_2$, имаме алтерниращи битове. При обръщане получаваме $0101_2 \equiv 5$.}
+\bigskip
+
+\exercise{10*}{
+    Да се напише програма, която при подадено цяло число изписва всички
+    негови прости делители.
+}
+\bigskip
 
 \end{document}

@@ -409,3 +409,5 @@ FodyWeavers.xsd
 
 *.vcxproj
 *.vcxproj.*
+
+random/*

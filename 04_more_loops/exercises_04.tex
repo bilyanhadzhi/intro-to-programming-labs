@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[bulgarian]{babel}
+\usepackage{inconsolata}
+\usepackage{hyperref}
+\usepackage{indentfirst}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=blue
+}
+
+\newcommand{\example}[2] {
+
+    \smallskip
+    \underline{Пример}:
+
+    Вход:\hphantom{д} \code{#1}
+
+    Изход: \code{#2}
+}
+
+\newcommand{\explanation}[1] {
+
+    \underline{Пояснение}: #1
+}
+
+\newcommand{\outputline}[1] {\\\indent \indent #1}
+
+\newcommand{\exercise}[2] {
+    \textbf{Зад. #1.} #2
+}
+
+\newcommand{\latinttfamily}{\fontencoding{OT1}\ttfamily}
+\DeclareTextFontCommand{\ltexttt}{\latinttfamily}
+\newcommand{\code}[1]{\ltexttt{#1}}
+
+
+\title{Увод в програмирането 2020/2021\\ Група 8, практикум №4}
+\date{}
+
+\begin{document}
+\maketitle
+
+\exercise{1}{
+    Да се напише програма, която приема число и обръща знака му чрез побитови операции.
+}
+\bigskip
+
+\exercise{2}{
+    Да се напише програма, която по подадено неотрицателно число пресмята за колко стъпки
+    може да се превърне в 0. Правилата са следните:
+    \begin{itemize}
+        \item Ако числото е четно, го делим на 2.
+        \item Ако числото е нечетно, изваждаме 1 от него.
+    \end{itemize}
+}
+
+\exercise{3}{
+    Да се напише програма, която приема естествено число \code{n} и \code{n} на брой
+    числа. Като резултат да се изведе сумата от квадратите на всички числа.
+}
+\example{\outputline{3} \outputline{3 -1 4}}{26}
+\bigskip
+
+\exercise{4}{
+    Да се напише програма, която приема естествено число \code{n}
+    и извежда разликата:
+    $$(1 + 2 + \ldots + n)^2 - (1^2 + 2^2 + \ldots + n^2)$$
+}
+\example{5}{170}
+\explanation{
+    \outputline{$(1 + 2 + \ldots + 5)^2 = 15^2 = 225$}
+    \outputline{$1^2 + 2^2 + \ldots + 5^2 = 55$}
+}
+\bigskip
+
+\exercise{5*}{
+    Да се напише програма, която по въведено число проверява дали може да се
+    получи като сума на две прости числа и извежда всички варианти на конзолата.
+}
+\bigskip
+
+\exercise{6**}{
+    Дадено е цяло неотрицателно число и възможността да се разменят само две от цифрите му.
+    Да се намери най-голямото число, което може да се образува.
+}
+\example{4753}{7453}
+\example{7266}{7662}
+\example{854}{854}
+
+\end{document}

@@ -2,8 +2,8 @@
 
 int main(void)
 {
-	char ch;
-	std::cin >> ch;
+    char ch;
+    std::cin >> ch;
 
-	std::cout << (int)ch << std::endl;
+    std::cout << (int)ch << std::endl;
 }

@@ -1,17 +1,19 @@
 #include <iostream>
 
-int main(void)
+int main()
 {
-	int x;
-	int y;
+    int x;
+    int y;
 
-	std::cin >> x >> y;
+    std::cin >> x >> y;
 
-	int diff = x - y;
-	if (diff < 0) {
-		std::cout << -diff << std::endl;
-	}
-	else {
-		std::cout << diff << std::endl;
-	}
+    int diff = x - y;
+    if (diff < 0)
+    {
+        std::cout << -diff << std::endl;
+    }
+    else
+    {
+        std::cout << diff << std::endl;
+    }
 }

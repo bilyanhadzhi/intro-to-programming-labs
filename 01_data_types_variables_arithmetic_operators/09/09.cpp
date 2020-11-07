@@ -2,11 +2,11 @@
 
 int main(void)
 {
-	char lowercase;
-	std::cin >> lowercase;
+    char lowercase;
+    std::cin >> lowercase;
 
-	int difference = 'a' - 'A';
-	char result = lowercase - difference;
+    int difference = 'a' - 'A';
+    char result = lowercase - difference;
 
-	std::cout << result << std::endl;
+    std::cout << result << std::endl;
 }

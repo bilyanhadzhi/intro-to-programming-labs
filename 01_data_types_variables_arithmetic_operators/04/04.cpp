@@ -2,11 +2,10 @@
 
 int main(void)
 {
-	int a;
-	int b;
+    int a;
+    int b;
 
-	std::cin >> a >> b;
+    std::cin >> a >> b;
 
-	std::cout << a << " + " << b << " = " << (a + b) << std::endl;
-
+    std::cout << a << " + " << b << " = " << (a + b) << std::endl;
 }

@@ -1,0 +1,142 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[bulgarian]{babel}
+\usepackage{inconsolata}
+\usepackage{hyperref}
+\usepackage{indentfirst}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=blue
+}
+
+\newcommand{\example}[2] {
+
+    \smallskip
+    \underline{Пример}:
+
+    Вход:\hphantom{д} \code{#1}
+
+    Изход: \code{#2}
+}
+
+\newcommand{\explanation}[1] {
+
+    \underline{Пояснение}: #1
+}
+
+\newcommand{\outputline}[1] {\\\indent \indent #1}
+
+\newcommand{\exercise}[2] {
+    \textbf{Зад. #1.} #2
+}
+
+\newcommand{\latinttfamily}{\fontencoding{OT1}\ttfamily}
+\DeclareTextFontCommand{\ltexttt}{\latinttfamily}
+\newcommand{\code}[1]{\ltexttt{#1}}
+
+
+\title{Увод в програмирането 2020/2021\\ Група 8, практикум №6}
+\date{}
+
+\begin{document}
+\maketitle
+
+\exercise{1}{
+    Да се напише програма, която приема естествено число \code{n} и \code{n} на брой числа в масив, и
+    извежда най-малкото и най-голямото от тях.
+}
+\example{
+    \outputline{6}
+    \outputline{7 3 -1 2 10 0}
+}{
+    \outputline{-1 10}
+}
+\bigskip
+
+\exercise{2}{
+    Да се напише програма, която приема естествено число \code{n} и \code{n} на брой цели числа, и
+    извежда нейната най-дълга монотонно растяща подредица.
+}
+\example{
+    \outputline{9}
+    \outputline{-5 5 4 2 6 7 7 10 4}
+}{
+    \outputline{2 6 7 7 10}
+}
+\bigskip
+\newpage
+
+\exercise{3}{
+    Да се напише програма, която приема естествено число \code{n} и \code{n} на брой цели числа.
+
+    Да се изведат числата, които са по-големи от сбора на всички след тях.
+    \textit{Забележка:} Сборът на нула числа е нула.
+}
+\example{
+    \outputline{4}
+    \outputline{5 1 2 1}
+}{
+    \outputline{5 2 1}
+}
+\explanation{5 > (1 + 2 + 1), 2 > 1, 1 > 0}
+\bigskip
+
+\exercise{4}{
+    Да се напише програма, която извежда колко пъти се среща всяка цифра
+    по подадено цяло число. Числото може да съдържа между 1 и 12 цифри.
+}
+\bigskip
+
+\exercise{5}{
+    \textbf{Колко ученици учат?}
+
+    Да се напише програма, която приема естествено число \code{n}
+    и \code{n} на брой двойки естествени числа.
+
+    Всяка двойка е растяща и отговаря на период, в който даден ученик е учил.
+    Първото число е моментът на започване, а второто - на приключване на ученето.
+    Последно се въвежда точка във времето.
+
+    Да се изведе колко на брой ученици учат в тази точка от времето.
+}
+\example{
+    \outputline{3}
+    \outputline{1 6}
+    \outputline{2 4}
+    \outputline{4 5}
+    \outputline{4}
+}{
+    \outputline{2}
+}
+\explanation{
+    \textit{Ученик 1} учи в 4.
+    \textit{Ученик 2} завършва в 4, т.е. вече не учи.
+    \textit{Ученик 3} започва в 4, т.е. вече учи.
+}
+\bigskip
+
+\newpage
+\exercise{6}{
+    По въведен масив от \code{n} на брой естествени числа, да се
+    преместят всички нули в края на масива, запазвайки наредбата
+    на останалите елементи.
+}
+\example{
+    \outputline{8}
+    \outputline{5 2 0 3 7 0 1 0}
+}{
+    \outputline{5 2 3 7 1 0 0 0}
+}
+\bigskip
+
+\exercise{7}{
+    Да се напише програма, която по въведени \code{n} числа и число \code{k} проверява дали
+    съществува подредица, сумата на числата в която е равна на \code{k}.
+    Ако има, да се изведат индексите на първия и последния член от подредицата. В противен
+    случай да се изведе подходящо съобщение.
+}
+
+\end{document}

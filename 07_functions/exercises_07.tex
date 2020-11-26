@@ -1,0 +1,124 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[bulgarian]{babel}
+\usepackage{inconsolata}
+\usepackage{hyperref}
+\usepackage{indentfirst}
+\usepackage{multicol}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=blue
+}
+
+\newcommand{\example}[2] {
+
+    \smallskip
+    \underline{Пример}:
+
+    Вход:\hphantom{д} \code{#1}
+
+    Изход: \code{#2}
+}
+
+\newcommand{\explanation}[1] {
+
+    \underline{Пояснение}: #1
+}
+
+\newcommand{\outputline}[1] {\\\indent \indent #1}
+
+\newcommand{\exercise}[2] {
+    \textbf{Зад. #1.} #2
+}
+
+\newcommand{\latinttfamily}{\fontencoding{OT1}\ttfamily}
+\DeclareTextFontCommand{\ltexttt}{\latinttfamily}
+\newcommand{\code}[1]{\ltexttt{#1}}
+
+
+\title{Увод в програмирането 2020/2021\\ Група 8, практикум №7}
+\date{}
+
+\begin{document}
+\maketitle
+
+\exercise{1}{Да се напише функция, която приема число и връща дали то е положително.}
+\bigskip
+
+\exercise{2}{Да се напише функция \code{max}, която приема две цели числа и връща стойността
+на по-голямото от тях.}
+\bigskip
+
+\exercise{3}{
+    Да се напишат две функции:
+    \begin{itemize}
+        \item {
+            \code{input\_array}, която при подаден масив \code{int arr[SIZE]} и
+            дължина \code{int n} въвежда елементите на \code{arr}.
+        }
+        \item{
+            \code{print\_array}, която при подаден масив \code{int arr[SIZE]} и
+            дължина \code{int n} извежда елементите на \code{arr}.
+        }
+    \end{itemize}
+}
+\bigskip
+
+\exercise{4}{
+    \begin{itemize}
+        \item Да се напише функция, която проверява дали дадено цяло число \code{x} е просто.
+        \item{
+            Да се напише функция, която приема двата края на затворен интервал, и
+            извежда всички прости числа в него.
+        }
+
+    \end{itemize}
+}
+\bigskip
+
+\exercise{5}{
+    \begin{itemize}
+        \item Да се напише функция, която проверява дали дадено цяло число \code{x} е точна степен на дадено цяло число \code{n}
+        \item Да се напише функция, която по дадени цели числа \code{k} и \code{n}
+        $(1 \leq k, n \leq 100)$ и масив от цели числа \code{a}, определя дали в \code{a} има поне \code{k} числа, които са точни степени на \code{n}.
+    \end{itemize}
+}
+
+\newpage
+
+\exercise{6}{
+    Да се напише функция, която приема масив от цели числа в интервала [1, 100]
+    и неговата дължина и връща \textbf{късметлийско число} от него.
+    Едно число наричаме \textit{късметлийско}, ако стойността му
+    е равна на броя на срещанията му в масива.
+
+    Ако няма късметлийски числа, върнатата стойност е -1. Ако има повече от едно,
+    трябва да се върне най-голямото.
+}
+\begin{multicols}{2}
+\example{[1, 1, 2, 2]}{2}
+\example{[3, 3, 1, 2, 3]}{3}
+\columnbreak
+\example{[5, 6, 1, 1, 7]}{-1}
+\example{[4, 4, 4, 4]}{4}
+\end{multicols}
+\bigskip
+
+\exercise{7}{
+    Да се реализира функция със следната сигнатура:
+
+    \code{int steps(int[SIZE] x\_values, int[SIZE] y\_values, int n)},\\
+    която приема два масива с \code{n} на брой съответно \code{x} и \code{y}
+    координати на точки в равнината.
+
+    Функцията трябва да връща за колко \textbf{стъпки} може да се обходят всички точки
+    в последователността, в която са дадени, започвайки от първата.
+
+    Една \textbf{стъпка} може да е едно хоризонтално/вертикално движение с дължина 1,
+    или едно диагонално движение.
+}
+
+\end{document}

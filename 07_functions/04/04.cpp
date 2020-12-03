@@ -3,6 +3,11 @@
 
 bool is_prime(int x)
 {
+    if (x <= 1)
+    {
+        return false;
+    }
+
     int sqrt_x = sqrt(x);
 
     for (int i = 2; i <= sqrt_x; i++)

@@ -11,7 +11,7 @@ int board[DIM][DIM];
 
 // prototypes
 void clear();
-void swap(int *a, int *b);
+void swap(int* a, int* b);
 void init();
 void draw();
 bool move(int tile);

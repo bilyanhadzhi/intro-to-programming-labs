@@ -1,0 +1,120 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[bulgarian]{babel}
+\usepackage{inconsolata}
+\usepackage{hyperref}
+\usepackage{indentfirst}
+\usepackage{multicol}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=blue
+}
+
+\newcommand{\example}[2] {
+
+    \smallskip
+    \underline{Пример}:
+
+    Вход:\hphantom{д} \code{#1}
+
+    Изход: \code{#2}
+}
+
+\newcommand{\explanation}[1] {
+
+    \underline{Пояснение}: #1
+}
+
+\newcommand{\outputline}[1] {\\\indent \indent #1}
+
+\newcommand{\exercise}[2] {
+    \textbf{Зад. #1.} #2
+}
+
+\newcommand{\latinttfamily}{\fontencoding{OT1}\ttfamily}
+\DeclareTextFontCommand{\ltexttt}{\latinttfamily}
+\newcommand{\code}[1]{\ltexttt{#1}}
+
+
+\title{Увод в програмирането 2020/2021\\ Група 8, практикум №8}
+\date{}
+
+\begin{document}
+\maketitle
+
+\exercise{1}{
+    Да се напише програма, която въвежда име и фамилия (не по-дълги от 128 символа)
+    на човек и ги извежда във формат: \outputline{\code{<Last name>, <First name>}}
+}
+\example{Jason Statham}{Statham, Jason}
+\bigskip
+
+\exercise{2}{
+    Да се напише функция:
+    \outputline{\code{void reverse(char* str)}}, \\
+    която обръща низ на място, т.е. без използване на допълнителни масиви.
+}
+\bigskip
+
+\exercise{3}{
+    Да се напише функция:
+
+    \code{void caesar(char* text, int key, char* result)},
+
+    която шифрира първия низ по \href{https://en.wikipedia.org/wiki/Caesar_cipher}{шифъра на Цезар}
+    и записва резултата в \code{result}.
+}
+\bigskip
+
+\exercise{4}{
+    Да се напише функция, която приема низ и връща дължината на най-дългия му непразен
+    подниз, съставен от само един уникален символ.
+}
+\begin{multicols}{2}
+    \example{inbetw\underline{ee}n}{2}
+    \columnbreak
+    \example{\underline{p}}{1}
+\end{multicols}
+\newpage
+
+\exercise{5}{
+    Да се напише функция:
+
+    \code{void vigenere(char* text, char* key, char* result)}.
+
+    Функцията трябва да шифрира първия низ по
+    \href{https://en.wikipedia.org/wiki/Vigen\%C3\%A8re_cipher}{шифъра на Виженер},
+    използвайки втория низ като ключ, и да запише резултата в третия.
+}
+\bigskip
+
+\exercise{6}{
+    Да се напише функция, която изтрива всички срещания на даден низ \code{what}
+    в даден низ \code{where}.
+
+    Функцията да връща указател към позицията на първия изтрит подниз в \code{where} или
+    \code{nullptr}, ако не е изтрит нито един подниз.
+}
+\example{
+    \outputline{where: "aa bb aac ac"}
+    \outputline{what:\hphantom{e} "aa"}
+}{
+    \outputline{where: "** bb **c ac"}
+}
+\bigskip
+
+\exercise{7}{
+    Да се напише програма, която въвежда низ с дължина до 256 символа и извежда следните
+    статистики:
+    \begin{itemize}
+        \item{броят на думите;}
+        \item{средната дължина на думите;}
+        \item{най-дългата дума;}
+    \end{itemize}
+}
+\bigskip
+
+\end{document}

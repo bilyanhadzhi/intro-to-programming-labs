@@ -39,7 +39,7 @@
 \newcommand{\code}[1]{\ltexttt{#1}}
 
 
-\title{Увод в програмирането 2020/2021\\ Група 8, практикум №8}
+\title{Увод в програмирането 2020/2021\\ Група 8, практикум №9 и №10}
 \date{}
 
 \begin{document}
@@ -62,7 +62,7 @@
 \exercise{3}{
     Да се напише функция:
 
-    \code{void caesar(char* text, int key, char* result)},
+    \code{void caesar(const char* text, int key, char* result)},
 
     която шифрира първия низ по \href{https://en.wikipedia.org/wiki/Caesar_cipher}{шифъра на Цезар}
     и записва резултата в \code{result}.
@@ -83,7 +83,7 @@
 \exercise{5}{
     Да се напише функция:
 
-    \code{void vigenere(char* text, char* key, char* result)}.
+    \code{void vigenere(const char* text, char* key, char* result)}.
 
     Функцията трябва да шифрира първия низ по
     \href{https://en.wikipedia.org/wiki/Vigen\%C3\%A8re_cipher}{шифъра на Виженер},
@@ -92,6 +92,22 @@
 \bigskip
 
 \exercise{6}{
+    Да се напише функция, която прави всички букви в низ малки.
+}
+\bigskip
+
+\exercise{7}{
+    Да се напише функция, която сравнява два низа лексикографски
+    (без да се използва \code{strcmp()})
+}
+\bigskip
+
+\exercise{8}{
+    Да се напише функция, която обръща всички думи в низ.
+}
+\bigskip
+
+\exercise{9}{
     Да се напише функция, която изтрива всички срещания на даден низ \code{what}
     в даден низ \code{where}.
 
@@ -106,7 +122,7 @@
 }
 \bigskip
 
-\exercise{7}{
+\exercise{10}{
     Да се напише програма, която въвежда низ с дължина до 256 символа и извежда следните
     статистики:
     \begin{itemize}
@@ -117,4 +133,32 @@
 }
 \bigskip
 
+\exercise{11}{
+    Да се напише функция, която приема низ, съдържащ само символите
+    \code{(} и \code{)}, и индекс на отваряща скоба, и връща индекса
+    на съответната ѝ затваряща скоба.
+}
+\newpage
+
+\exercise{12}{
+    Да се напише функция \outputline{\code{trim(char* str)}},
+
+    която премахва \textit{whitespace}
+    символи (празни места, табулации, нов ред) от началото и края на низ.
+}
+\bigskip
+
+\exercise{13}{
+    Да се напише функция \outputline{\code{concat(const char* str1, const char* str2)}},
+
+    която връща указател към нов низ, образуван от долепянето на \code{str1} и \code{str2}.
+}
+\bigskip
+
+\exercise{14}{
+    Да се напише функция \outputline{\code{anagram(const char* str1, const char* str2)}},
+
+    която връща дали два низа са анаграми или не. Низ е \textbf{анаграма} на друг низ,
+    ако е пермутация на буквите му.
+}
 \end{document}

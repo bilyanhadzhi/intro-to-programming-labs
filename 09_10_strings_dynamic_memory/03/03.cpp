@@ -22,7 +22,7 @@ int main()
     char str[MAX_LEN] = "xyz";
     char result[MAX_LEN];
 
-    ceasar(str, 13, result);
+    ceasar(str, 2, result);
 
     std::cout << result << "\n";
 }

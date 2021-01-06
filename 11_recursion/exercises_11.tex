@@ -1,0 +1,100 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[bulgarian]{babel}
+\usepackage{inconsolata}
+\usepackage{hyperref}
+\usepackage{indentfirst}
+\usepackage{multicol}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=blue
+}
+
+\newcommand{\example}[2] {
+
+    \smallskip
+    \underline{Пример}:
+
+    Вход:\hphantom{д} \code{#1}
+
+    Изход: \code{#2}
+}
+
+\newcommand{\explanation}[1] {
+
+    \underline{Пояснение}: #1
+}
+
+\newcommand{\outputline}[1] {\\\indent \indent #1}
+
+\newcommand{\exercise}[2] {
+    \textbf{Зад. #1.} #2
+}
+
+\newcommand{\latinttfamily}{\fontencoding{OT1}\ttfamily}
+\DeclareTextFontCommand{\ltexttt}{\latinttfamily}
+\newcommand{\code}[1]{\ltexttt{#1}}
+
+
+\title{Увод в програмирането 2020/2021\\ Група 8, практикум №11}
+\date{}
+
+\begin{document}
+\maketitle
+
+\exercise{1}{
+    Да се напише рекурсивна функция, която смята сбора на две положителни числа.
+}
+\bigskip
+
+\exercise{2}{
+    Да се напише рекурсивна функция, която намира индекса на първата главна буква в низ.
+    Ако няма такава, да се върне -1.
+}
+\bigskip
+
+\exercise{3}{
+    Да се напише рекурсивна функция, която връща дали низ е палиндром.
+}
+\bigskip
+
+\exercise{4}{
+    Да се напише рекурсивна функция, намира n-тото число на "Трибоначи".
+
+    Редицата е дефинирана така:
+    \begin{itemize}
+        \item $T_0 = 0$
+        \item $T_1 = 1$
+        \item $T_2 = 1$
+        \item $T_n = T_{n - 3} + T_{n - 2} + T_{n - 1},\ n \geq 3$
+    \end{itemize}
+}
+\newpage
+
+\exercise{5}{
+    Да се напише функция, която приема масив от цели неотрицателни числа
+    и начален индекс. Да се изведе дали чрез поредица от прескачания* в
+    масива може да се стигне до индекс, на чиято позиция стои елемент със стойност 0.
+
+    Ако се намираме на индекс \code{i}, то можем да прескочим към индекси:
+    \begin{itemize}
+        \item \code{i + arr[i]}
+        \item \code{i - arr[i]}
+    \end{itemize}
+}
+\example{
+    \outputline{arr: [4, 2, 3, 0, 3, 1, 2], start: 5}
+}{
+    \outputline{1}
+}
+\explanation{Поредицата от индекси е: \textbf{5, 4, 1, 3}}
+\bigskip
+
+\exercise{6}{
+    Да се напише функция, която търси решение на задачата за \textbf{разходката на коня}.
+}
+
+\end{document}

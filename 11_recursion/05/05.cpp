@@ -26,7 +26,12 @@ bool can_jump_to_zero(const int* arr, const int n, int start)
         visited[i] = 0;
     }
 
-    return can_jump_to_zero_rec(arr, n, 0, visited);
+    bool result = can_jump_to_zero_rec(arr, n, 0, visited);
+
+    // free memory
+    delete[] visited;
+
+    return result;
 }
 
 int main()

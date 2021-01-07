@@ -8,7 +8,6 @@ int sum(int a, int b)
     }
 
     return sum(a + 1, b - 1);
-    // sum(1, 6) -> sum(2, 5) -> .. -> sum(7, 0)
 }
 
 int main()

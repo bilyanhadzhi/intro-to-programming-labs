@@ -36,7 +36,11 @@ int tribonacci(int n)
     values[1] = 1;
     values[2] = 1;
 
-    return tribonacci_helper(n, values);
+    int value = tribonacci_helper(n, values);
+
+    delete[] values;
+
+    return value;
 }
 
 int main()
